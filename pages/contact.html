@@ -1,6 +1,6 @@
 ---
 layout   : default
-permalink: contact
+permalink: /contact
 # Custom Page Variables
 # ─────────────────────
 title: Contact
@@ -15,37 +15,34 @@ title: Contact
         <br>E info@barker.be
     </p>
     <p>Social media
-        <br><img src="http://via.placeholder.com/30x30" class="img-fluid" alt="homefotonaam">Barker
-        <br><img src="http://via.placeholder.com/30x30" class="img-fluid" alt="homefotonaam">Barker
+        <br><i class="fa fa-facebook" aria-hidden="true"></i>Barker
+        <br><i class="fa fa-twitter" aria-hidden="true"></i>Barker
     </p>
 </div>
 <!-- einde adres -->
 
 <!-- form -->
 <div class="col-12 col-lg-6">
-    <form>
+    <form class="contact">
         <div class="row">
-            <div class="col-12">
+            <div class="col-12 form-item">
                 <label for="validationDefault01">Naam:</label>
                 <input type="text" class="form-control" id="validationDefault01" placeholder="Voornaam + achternaam" required>
             </div>
-            <div class="col-12">
+            <div class="col-12 form-item">
                 <label for="validationDefault02">E-mail:</label>
                 <input type="text" class="form-control" id="validationDefault02" placeholder="E-mail" required>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-12">
+            <div class="col-12 form-item">
                 <label for="validationDefault03">Onderwerp:</label>
                 <input type="text" class="form-control" id="validationDefault03" placeholder="Onderwerp" required>
             </div>
-            <div class="col-12">
+            <div class="col-12 form-item">
                 <label for="validationDefault04">Bericht:</label>
-                <input type="text" class="form-control" id="validationDefault04" placeholder="Bericht" required>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Bericht"></textarea>
             </div>
         </div>
-          
-        <button class="btn btn-primary btn-block" type="submit">Verzend</button>
+        <a class="btn btn-primary btn-block" href="#" role="button">Verzend</a>  
     </form>
 </div>
 <!-- einde form -->

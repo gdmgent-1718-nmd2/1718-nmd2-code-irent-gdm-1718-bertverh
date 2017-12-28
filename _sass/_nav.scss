@@ -4,19 +4,24 @@
     background-color: $darkgrey;
     text-transform: uppercase;
     padding: 0;
-    a.navbar-brand{
+    img.navbar-brand{
+        width: 100px;
         padding: 0.5rem 1rem;
     }
     a.nav-link{
         height: 50px;
         line-height: 35px;
-        padding: 0.5rem 1.5rem;
+        padding: 0.5rem 3rem;
+        transition: background-color 0.5s;
         &:hover{
             background-color: $red;
         }
         &:active{
             background-color: $darkred;
         }
+    }
+    li.active{
+        background-color: $lightgrey;
     }
 }
 // Small devices (landscape phones, 576px and up)

@@ -1,6 +1,6 @@
 ---
 layout   : default
-permalink: bestel/
+permalink: /bestel/
 # Custom Page Variables
 # ─────────────────────
 title: Bestel
@@ -10,8 +10,8 @@ title: Bestel
     <nav aria-label="breadcrumb" role="navigation">
         <ol class="breadcrumb">
             <li class="breadcrumb-item active" aria-current="page">Bestel</li>
-            <li class="breadcrumb-item"><a href="#">Gegevens</a></li>
-            <li class="breadcrumb-item"><a href="#">Betalen</a></li>
+            <li class="breadcrumb-item"><a href="{{ "/bestel/gegevens.html" | relative_url }}">Gegevens</a></li>
+            <li class="breadcrumb-item"><a href="{{ "/bestel/betalen.html" | relative_url }}">Betalen</a></li>
         </ol>
     </nav>
 </div>
@@ -19,7 +19,7 @@ title: Bestel
 
 <!-- foto -->
 <div class="col-6">
-    <img src="http://via.placeholder.com/600x600" class="img-fluid" alt="BarBot">
+    <img src="{{ site.baseurl }}/images/product.jpg" class="img-fluid" alt="BarBot">
 </div>
 <!-- einde foto -->
 
@@ -30,7 +30,7 @@ title: Bestel
             <h3>BarkBot</h3>
         </div>
         <div class="col-12 col-md-6 col-lg-4">
-            <form>
+            <form class="bestel">
                 <div class="form-group">
                 <select class="form-control" id="exampleFormControlSelect1">
                     <option>1</option>
@@ -44,7 +44,7 @@ title: Bestel
             </form>
         </div>
         <div class="col-12 col-md-6 col-lg-4">
-            <p>€ 59,99 /dag</p> 
+            <p class="prijs-bestel">€ 59,99 /dag</p> 
         </div>
     </div>
     <div class="col-12 d-sm-none d-none d-sm-block">    
@@ -53,8 +53,8 @@ title: Bestel
 </div>
 <!-- einde info -->
 
-<!-- button doorverwijzen naar gegevens -->
-<div class="col-12 d-block d-sm-none">    
+<!-- button doorverwijzen naar gegevens smartphone -->
+<div class="col-12 d-block d-sm-none btn-gegevens-smartphone">    
     <a class="btn btn-primary btn-block" href="{{ "/bestel/gegevens.html" | relative_url }}" role="button">Naar gegevens</a>
 </div>
 <!-- einde button doorverwijzen naar gegevens -->
