@@ -1,7 +1,7 @@
 .style-guide {
-  $color: rgb(0, 26, 255);
-  border-bottom: 1px solid $color;
-  color: $color;
+  $red: rgba(255,0,0,1);
+  border-bottom: 1px solid $red;
+  color: $red;
   font-family: monospace;
   margin: 1em 0 2em;
   &::before {

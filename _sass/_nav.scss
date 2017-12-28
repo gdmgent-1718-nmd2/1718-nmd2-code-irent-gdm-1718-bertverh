@@ -1,0 +1,40 @@
+// Extra small devices (portrait phones, less than 576px)
+// No media query since this is the default in Bootstrap
+.navbar {
+    background-color: $darkgrey;
+    text-transform: uppercase;
+    padding: 0;
+    a.navbar-brand{
+        padding: 0.5rem 1rem;
+    }
+    a.nav-link{
+        height: 50px;
+        line-height: 35px;
+        padding: 0.5rem 1.5rem;
+        &:hover{
+            background-color: $red;
+        }
+        &:active{
+            background-color: $darkred;
+        }
+    }
+}
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+    
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+    
+}

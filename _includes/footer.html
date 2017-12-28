@@ -1,5 +1,24 @@
-<nav class="navbar fixed-bottom navbar-light bg-light">
-{%- if site.show-style-guide %}
-    <a href="{{ site.baseurl }}{% link style-guide/index.md %}" class="btn">Style Guide</a>
-{%- endif %}
+<nav class="navbar navbar-dark bg-dark footer">
+    <div class="container footer-col">
+        <div class="row"></div>
+            <div class="col-12 col-sm-4">
+                <img class="img-fluid" src="{{ site.baseurl }}/images/front-profile-mirror.jpg">
+                <p>Industrieweg 232<br>9030 Mariakerke</p>
+            </div>
+            <div class="col-12 col-sm-4">
+                <p><a href="{{ "/index.html" | relative_url }}">Home</a></p>
+                <p><a href="{{ "/ons-product.html" | relative_url }}">Ons product</a></p>
+                <p><a href="{{ "/bestel/index.html" | relative_url }}">Bestel nu</a></p>
+                <p><a href="{{ "/contact.html" | relative_url }}">Contact</a></p>
+                {%- if site.show-style-guide %}
+                    <a href="{{ site.baseurl }}{% link style-guide/index.md %}">Style Guide</a>
+                {%- endif %}
+            </div>
+            <div class="col-12 col-sm-4">
+                <p>Social media:</p>
+                <p><i class="fa fa-facebook" aria-hidden="true"></i>BarkBot</p>
+                <p><i class="fa fa-twitter" aria-hidden="true"></i>BarkBot</p>    
+            </div>
+        </div>    
+    </div>
 </nav>
