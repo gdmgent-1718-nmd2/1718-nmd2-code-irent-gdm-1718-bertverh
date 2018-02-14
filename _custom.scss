@@ -1,0 +1,352 @@
+//colors-----------------------//
+$white:rgb(255,255,255);
+$red: rgb(211, 3, 3);
+$darkred: rgb(155, 0, 0);
+$lightgrey: rgb(162, 162, 162);
+$grey: rgb(100,100,100);
+$darkgrey: rgb(50,50,50);
+
+// font-------------------------//
+@import url('https://fonts.googleapis.com/css?family=Coda');
+
+//global-----------------------//
+*{
+    font-family: 'Coda', cursive;
+    h1{
+        font-size: 50px;
+        margin-top: 25px;
+    }
+    h5{
+        font-size:24px;
+        color: $red;
+        font-weight: bold;
+    }
+    p{
+        line-height: 160%;
+        color: $grey;
+    }
+    a{
+        &:active{
+            text-decoration: none;
+        }   
+        &:hover{
+            text-decoration: none;
+        }
+        &.btn{
+            border-radius: 0;
+            border: none;
+            background-color: $red;
+            transition: background-color 0.5s;
+            &:hover{
+                background-color: $darkred;
+            }
+            &:active{
+                background-color: $darkgrey!important;
+                box-shadow: none!important;
+            }
+            &:focus{
+                box-shadow: none!important;
+            }
+        }
+    }
+    .bold{
+        font-weight: 900;
+        color: rgba(0,0,0,1);
+    }
+}
+//-----------------------------//
+
+
+//index.html-------------------//
+.banner{
+    padding: 0;
+    .front-banner{
+        margin-bottom: 25px;
+        padding: 0;
+        .card{
+            border: none;
+            .card-img-overlay{
+                position: absolute;
+                p{
+                    text-transform: uppercase;
+                    color: $white;
+                }
+            }
+            h2{
+                top: 20px;
+                position: absolute;
+                text-align: right;
+                right: 25%;
+                text-transform: uppercase;
+            }
+            .btn{
+                position: absolute;
+                margin-left: auto;
+                margin-right: auto;
+                left: 0;
+                right: 0;
+                bottom: 80px;
+                width: 150px;
+                text-transform: uppercase;
+                transition: width 0.25s;
+            }
+            .btn:hover{
+                width: 170px;
+            }
+            .ontdek{
+                position: absolute;
+                margin-left: auto;
+                margin-right: auto;
+                padding: 10px;
+                left: 0;
+                right: 0;
+                bottom: 0px;
+                width: 150px;
+                background-color: $red;
+                border-top-left-radius: 15px;
+                border-top-right-radius: 15px;
+                transition: width 0.25s, padding-bottom 0.25s;
+                &:hover{
+                    padding-bottom: 20px;
+                    width: 170px;
+                }
+                &:hover + #caret-down{
+                    visibility: visible;
+                }
+                p{
+                    text-align: center;
+                }
+            }
+            i{
+                position: absolute;
+                margin: 0 auto;
+                text-align: center;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                padding-bottom: 10px;
+                visibility: hidden;
+            }
+        }
+    }
+}
+.btn-informatie{
+    margin-bottom: 25px;
+}
+//-----------------------------//
+
+//ons-product.html-------------------//
+.row{
+    margin: 25px 0;
+    &:first-of-type{
+        margin-top:0;
+    }
+    &:last-of-type{
+        margin-bottom: 0;
+    }
+}
+.btn-bestel{
+    text-transform: uppercase;
+}
+.jumbotron-fluid{
+    background-color: $lightgrey;
+    padding: 2rem 2rem;
+    i{
+        margin-left: 25px;
+    }
+    ul{
+        list-style: none;
+        font-weight: bolder;
+        padding: 0;
+        li{
+            color: $white;
+            padding-left: 1.3em;
+            margin-bottom: 10px;
+            &:before {
+                content: "\f00c"; /* FontAwesome Unicode */
+                font-family: FontAwesome;
+                display: inline-block;
+                margin-left: -1.3em;
+                width: 1.3em; 
+                color: $red;
+            }
+            &:last-of-type{
+                margin-bottom: 0px;
+            }
+        }
+    }
+}
+table{
+    th, td{
+        border: none!important;
+    }
+    tr{
+        th{
+            padding-left: 25px!important;
+        }
+        &.row-head{
+            border-bottom: 1px solid $lightgrey;
+            text-transform: uppercase;
+            th{
+                padding: 25px 0 0 0!important;
+            }
+        }
+    }
+}
+//-----------------------------//
+
+//contact.html-------------------//
+.fa{
+    width: 25px;
+}
+form.contact{
+    .form-item{
+        margin-bottom: 10px;
+    }
+    textarea{
+        height: 200px;
+    }
+    a.btn{
+        margin-top: 15px;
+    }
+    .row, .col-12{
+        padding-left: 0!important;
+        padding-right: 0!important;
+    }
+}
+//-----------------------------//
+
+
+//bestel.html-------------------//
+.breadcrumb{
+    background-color: transparent;
+    padding: 0;
+    li{
+        a{
+            color: $red;
+            transition: color 0.5s;
+        }
+        &.active{
+            color:$lightgrey;
+            font-weight: bolder;
+        }
+    }
+}
+form.bestel{
+    margin-bottom: 50px;
+    .form-control{
+        display: inline;
+        width: 50px;
+    }
+}
+.btn-gegevens-smartphone{
+    margin-top:25px;
+}
+.prijs-bestel{
+    font-size: 24px;
+}
+//-----------------------------//
+
+
+//gegevens.html-------------------//
+form.gegevens{
+    margin-top: 25px;
+    input{
+        margin-bottom: 10px;
+    }
+}
+.btn-goto{
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+.goto{
+    margin-top: 15px;
+    a{
+        color: black;
+        transition: color 0.5s;
+        &:hover{
+            color: $red;
+        }
+        &:active{
+            color: $darkred;
+        }
+    }
+}
+//-----------------------------//
+
+
+//betalen.html-------------------//
+.betaalkeuze{
+    margin-top: 25px;
+}
+.betaal-icon{
+    width: 30px;
+    margin-right: 10px;
+}
+input[type='radio']:checked:after {
+    width: 20px;
+    height: 20px;
+    border-radius: 15px;
+    top: -2px;
+    left: -2px;
+    position: relative;
+    background-color: $white;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 6px solid $red;
+}
+//-----------------------------//
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+    //index.html-------------------//
+    .front-banner{
+        .card{
+            h2{
+                top: 20px;
+                font-size: 40px;
+            }
+        }
+    }
+    //-----------------------------//
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+    //index.html-------------------//
+    .front-banner{
+        margin-bottom: 50px;
+        .card{
+            h2{
+                top: 20px;
+                font-size: 60px;
+            }
+        }
+    }
+    //-----------------------------//
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+    //ons-product.html-------------------//
+    .btn-bestel{
+        max-width: 250px;
+    }
+    //-----------------------------//
+
+    .prijs{
+        text-align: right;
+    }
+    form.gegevens{
+        margin-top: 0px;
+    }
+    .betaalkeuze{
+        margin-top: 0px;
+    }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+    
+}
