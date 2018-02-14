@@ -6,6 +6,73 @@ permalink: /
 title: Home
 ---
 <!-- header foto -->
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-10">
+            <div class="gallery d-flex align-items-center">
+                <ul class="gallery-list">
+                    {% for image in site.static_files %}
+                    {% if image.path contains 'images/home' %}
+                        <li>        
+                            <img src="{{ site.baseurl }}{{ image.path }}" alt="image" class="img-fluid image"/>
+                        </li>
+                    {% endif %}
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+        <div class="col-2">
+            <div class="gallery-thumb">
+                <ul class="d-flex flex-column-reverse gallery-thumb-list">
+                    {% for image in site.static_files %}
+                    {% if image.path contains 'images/home' %}
+                        <li class="listitem">        
+                            <img src="{{ site.baseurl }}{{ image.path }}" alt="image" class="img-fluid image-thumb"/>
+                        </li>
+                    {% endif %}
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!--
+<div class="container">
+    <div class="row">
+        <div class="col-10">
+            <ul class="gallery">
+                {% for image in site.static_files %}
+                    {% if image.path contains 'images/slider' %}
+                        <li>        
+                            <img src="{{ site.baseurl }}{{ image.path }}" alt="image" class="image"/>
+                        </li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+        </div>
+
+        <div class="col-2">
+            <ul class="gallery-thumb">
+                {% for image in site.static_files %}
+                    {% if image.path contains 'images/slider' %}
+                        <li>        
+                            <img src="{{ site.baseurl }}{{ image.path }}" alt="image" class="image-thumb"/>
+                        </li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>
+-->
+
+
+
+
+
+
+<!--
+
 <div class="container-fluid banner">
     <div class="row">
         <div class="col-12 front-banner">
@@ -22,35 +89,30 @@ title: Home
                     <i class="fa fa-caret-down" id="caret-down"></i>
                 </div>
             </div>
-            <!-- tekst smartphone -->
             <div class="d-block d-sm-none">
                 <a class="btn btn-primary btn-block" href="{{ "/bestel/index.html" | relative_url }}" role="button">Bestel nu</a>
             </div>
-            <!-- einde tekst smartphone -->
         </div>
     </div>
 </div>
-<!-- einde header foto -->
 
 
 
 <div class="container">
     <div class="row">
-        <!-- intro tekst -->
         <div class="col-12 col-md-6">
             <h3>Het huis bewaken?</h3>
             <p>Een avond alleen thuis? Vertrek je op vakantie? Wil je het huis niet alleenvachterlaten? Met de BarkBot van Barker kan je het huis laten <span class="bold">beschermen</span> zonder er iemand thuis is. De BarkBot is uitgerust met een <span class="bold">camera</span> en kan bewegingen en geluid waarnemen. Door deze waarnemingen kan de BarkBot beginnen blaffen zoals een <span class="bold">echte hond</span> om indringers af te schrikken…</p>
             <a class="btn btn-primary btn-block btn-informatie" href="{{ "/ons-product.html" | relative_url }}" role="button">Meer informatie</a>
         </div>
-        <!-- einde intro tekst -->
 
-        <!-- intro product foto -->
         <div class="col-12 col-md-6">
             <img class="card-img d-sm-none d-none d-sm-block" src="{{ site.baseurl }}/images/front-profile-mirror.jpg" alt="Card image">  
         </div>
-        <!-- einde intro product foto -->
+
     </div>
 </div>
+-->
 
 
 

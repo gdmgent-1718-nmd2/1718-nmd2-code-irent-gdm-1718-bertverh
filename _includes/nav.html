@@ -1,5 +1,5 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
             <!-- websitelogo -->
             <img class="navbar-brand" src="{{ site.baseurl }}/images/logo.png" href="{{ site.baseurl }}{% link pages/index.html %}">
             <!-- hamburger icoon -->
@@ -8,8 +8,8 @@
             </button>
     
             <!-- hoofdnavigatie -->
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
+            <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarSupportedContent">
+                <ul class="navbar-nav">
                     {% assign links = site.data.navigation %}
                     {% for link in links %}
                         {% assign class = nil %}
@@ -33,6 +33,11 @@
                             </li>
                         {% endif %}
                     {% endfor %}
+                    <div class="social-media">
+                        <a id="facebook" href="https://www.facebook.com/photosbertje/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                        <a id="instagram" href="https://www.instagram.com/bert_verheye/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                        <a id="youtube" href="https://www.youtube.com/channel/UCr1JkPy3vtFjDJM90K1UZlA" target="_blank"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+                    </div>
                 </ul>
             </div>
         </div>

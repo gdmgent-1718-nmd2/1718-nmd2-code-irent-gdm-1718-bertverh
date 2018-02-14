@@ -7,42 +7,115 @@ title: Contact
 ---
 <!-- adres -->
 <div class="col-12 col-lg-6">
-    <p>Barker
-        <br>Industrieweg 232
-        <br>9030 Mariakerke
-    </p>
-    <p>T 09 234 86 00
-        <br>E info@barker.be
-    </p>
-    <p>Social media
-        <br><i class="fa fa-facebook" aria-hidden="true"></i>Barker
-        <br><i class="fa fa-twitter" aria-hidden="true"></i>Barker
-    </p>
+    <h2>Email</h2>
+    <p>info@photosbertje.be</p>
+    <h2>Social media</h2>
+    <a id="facebook_contact" href="https://www.facebook.com/photosbertje/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i>Photos Bertje</a>
+    <br><a id="instagram_contact" href="https://www.instagram.com/bert_verheye/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i>Photos Bertje</a>
+    <br><a id="youtube_contact" href="https://www.youtube.com/channel/UCr1JkPy3vtFjDJM90K1UZlA" target="_blank"><i class="fa fa-youtube-play" aria-hidden="true"></i>Photos Bertje</a>
 </div>
 <!-- einde adres -->
+<div class="col-12 col-lg-6">
+    <form class="form-horizontal contact" action="{{ site.baseurl }}/contact.php" method="post"  id="contact_form">
+        <fieldset>
+            <!-- Text input-->   
+            <div class="form-group">
+                <label class="col-12 control-label">First Name</label>  
+                <div class="col-12 inputGroupContainer">
+                    <div class="input-group">
+                        <input  name="first_name" placeholder="First Name" class="form-control"  type="text">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Text input-->   
+            <div class="form-group">
+                <label class="col-12 control-label" >Last Name</label> 
+                <div class="col-12 inputGroupContainer">
+                    <div class="input-group">
+                        <input name="last_name" placeholder="Last Name" class="form-control"  type="text">
+                    </div>
+                </div>
+            </div>
+            <!-- Text input-->
+            <div class="form-group">
+                <label class="col-12 control-label">E-Mail</label>  
+                <div class="col-12 inputGroupContainer">
+                    <div class="input-group">
+                        <input name="email" placeholder="E-Mail Address" class="form-control"  type="text">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Text input-->   
+            <div class="form-group">
+                <label class="col-12 control-label">Phone</label>  
+                <div class="col-12 inputGroupContainer">
+                    <div class="input-group">
+                        <input name="phone" placeholder="(845)555-1212" class="form-control" type="text">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Text input-->
+            <div class="form-group">
+                <label class="col-12 control-label">Description</label>
+                <div class="col-12 inputGroupContainer">
+                    <div class="input-group">
+                        <textarea class="form-control" name="comment" placeholder="Project Description"></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <!--OPTIONAL - Anti-Spam Field-->
+            <!-- this field is written into the contact.php file to prevent spambots from submitting your form. -->
+            <div class="form-group" id="gotcha">
+                <label class="col-12 control-label">Leave this field empty for control (Laat dit veld leeg als controle)</label>  
+                <div class="col-12 inputGroupContainer">
+                    <div class="input-group">
+                        <input  name="gotcha"  class="form-control"  type="text">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Success message -->
+            <div class="alert alert-success" role="alert" id="success_message">Success <i class="glyphicon glyphicon-thumbs-up"></i> Thanks for contacting us, we will get back to you shortly.</div>
+
+            <!-- Button -->
+            <div class="form-group">
+                <label class="col-md-4 control-label"></label>
+                <div class="col-md-4">
+                    <button type="submit" class="btn btn_verzend" >Send (Verzend) <span class="glyphicon glyphicon-send"></span></button>
+                </div>
+            </div>
+        </fieldset>
+    </form>
+</div>
+
+
 
 <!-- form -->
 <div class="col-12 col-lg-6">
     <form class="contact">
         <div class="row">
             <div class="col-12 form-item">
-                <label for="validationDefault01">Naam:</label>
+                <label for="validationDefault01">Name</label>
                 <input type="text" class="form-control" id="validationDefault01" placeholder="Voornaam + achternaam" required>
             </div>
             <div class="col-12 form-item">
-                <label for="validationDefault02">E-mail:</label>
+                <label for="validationDefault02">E-mail</label>
                 <input type="text" class="form-control" id="validationDefault02" placeholder="E-mail" required>
             </div>
             <div class="col-12 form-item">
-                <label for="validationDefault03">Onderwerp:</label>
+                <label for="validationDefault03">Subject</label>
                 <input type="text" class="form-control" id="validationDefault03" placeholder="Onderwerp" required>
             </div>
             <div class="col-12 form-item">
-                <label for="validationDefault04">Bericht:</label>
+                <label for="validationDefault04">Message</label>
                 <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Bericht"></textarea>
             </div>
         </div>
-        <a class="btn btn-primary btn-block" href="#" role="button">Verzend</a>  
+        <a class="btn btn-primary btn-block" href="#" role="button">Send</a>  
     </form>
 </div>
 <!-- einde form -->

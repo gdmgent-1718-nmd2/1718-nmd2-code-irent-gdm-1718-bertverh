@@ -1,0 +1,81 @@
+---
+layout   : parallax
+permalink: /red-accent
+# Custom Page Variables
+# ─────────────────────
+title: Red-accent
+---
+
+
+    <div class="jumbotron">
+        <div class="parallax-bg" style="background: url('{{ site.baseurl }}/images/fb_omslag.jpg') no-repeat center center; background-size:100% auto;"></div>
+    </div>
+    <h1>{{ page.title }}</h1>
+</div>
+<div class="row">
+    <div class="jumbotron">
+        <img class="parallax-bg" src="{{ site.baseurl }}/images/red-accent_bg.jpg">
+    </div>
+    <div class="parallax-bg" style="background: url('{{ site.baseurl }}/images/fb_omslag.jpg') no-repeat center center; background-size:100% auto;"></div>
+        <div class="jumbotron"></div>            
+    </div>
+</div>
+<div class="container">
+  <div class="row">
+    <h2>Page Content</h2>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis pharetra varius quam sit amet vulputate. 
+    Quisque mauris augue, molestie tincidunt condimentum vitae, gravida a libero. Aenean sit amet felis 
+    dolor, in sagittis nisi. Sed ac orci quis tortor imperdiet venenatis. Duis elementum auctor accumsan. 
+    Aliquam in felis sit amet augue.
+    <br>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis pharetra varius quam sit amet vulputate. 
+    Quisque mauris augue, molestie tincidunt condimentum vitae, gravida a libero. Aenean sit amet felis 
+    dolor, in sagittis nisi. Sed ac orci quis tortor imperdiet venenatis. Duis elementum auctor accumsan. 
+    Aliquam in felis sit amet augue.
+    <br>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis pharetra varius quam sit amet vulputate. 
+    Quisque mauris augue, molestie tincidunt condimentum vitae, gravida a libero. Aenean sit amet felis 
+    dolor, in sagittis nisi. Sed ac orci quis tortor imperdiet venenatis. Duis elementum auctor accumsan. 
+    Aliquam in felis sit amet augue.
+    <br>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis pharetra varius quam sit amet vulputate. 
+    Quisque mauris augue, molestie tincidunt condimentum vitae, gravida a libero. Aenean sit amet felis 
+    dolor, in sagittis nisi. Sed ac orci quis tortor imperdiet venenatis. Duis elementum auctor accumsan. 
+    Aliquam in felis sit amet augue.
+  </div>
+</div>
+</div>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-10">
+            <div class="gallery d-flex align-items-center">
+                <ul class="gallery-list">
+                    {% for image in site.static_files %}
+                    {% if image.path contains 'images/red-accent' %}
+                        <li>        
+                            <img src="{{ site.baseurl }}{{ image.path }}" alt="image" class="img-fluid image"/>
+                        </li>
+                    {% endif %}
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+        <div class="col-2">
+            <div class="gallery-thumb">
+                <ul class="d-flex flex-column-reverse gallery-thumb-list">
+                    {% for image in site.static_files %}
+                    {% if image.path contains 'images/red-accent' %}
+                        <li class="listitem">        
+                            <img src="{{ site.baseurl }}{{ image.path }}" alt="image" class="img-fluid image-thumb"/>
+                        </li>
+                    {% endif %}
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+

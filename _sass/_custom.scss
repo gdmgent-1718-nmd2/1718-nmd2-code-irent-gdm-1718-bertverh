@@ -1,10 +1,12 @@
 //colors-----------------------//
 $white:rgb(255,255,255);
-$red: rgb(211, 3, 3);
+$red: rgb(255, 0, 0);
 $darkred: rgb(155, 0, 0);
-$lightgrey: rgb(162, 162, 162);
+$lightgrey: rgb(200, 200, 200);
 $grey: rgb(100,100,100);
 $darkgrey: rgb(50,50,50);
+$black: rgb(0,0,0);
+$yellow: rgb(245,211,52);
 
 // font-------------------------//
 @import url('https://fonts.googleapis.com/css?family=Coda');
@@ -13,17 +15,18 @@ $darkgrey: rgb(50,50,50);
 *{
     font-family: 'Coda', cursive;
     h1{
-        font-size: 50px;
+        font-size: 30px;
         margin-top: 25px;
     }
-    h5{
-        font-size:24px;
-        color: $red;
-        font-weight: bold;
+    h2{
+        font-size: 24px;
     }
     p{
         line-height: 160%;
         color: $grey;
+        &:last-of-type{
+            margin-bottom: 50px;
+        }
     }
     a{
         &:active{
@@ -58,245 +61,124 @@ $darkgrey: rgb(50,50,50);
 
 
 //index.html-------------------//
-.banner{
-    padding: 0;
-    .front-banner{
-        margin-bottom: 25px;
+.gallery{
+    height: 100%;
+    .gallery-list{
+        list-style: none;
+        margin: 50px 0;
         padding: 0;
-        .card{
-            border: none;
-            .card-img-overlay{
-                position: absolute;
-                p{
-                    text-transform: uppercase;
-                    color: $white;
-                }
+        width: 100%;
+        li{
+            display:none;
+            justify-content: center;
+            width: 100%;
+            &:last-of-type{
+                display:flex;
             }
-            h2{
-                top: 20px;
-                position: absolute;
-                text-align: right;
-                right: 25%;
-                text-transform: uppercase;
-            }
-            .btn{
-                position: absolute;
-                margin-left: auto;
-                margin-right: auto;
-                left: 0;
-                right: 0;
-                bottom: 80px;
-                width: 150px;
-                text-transform: uppercase;
-                transition: width 0.25s;
-            }
-            .btn:hover{
-                width: 170px;
-            }
-            .ontdek{
-                position: absolute;
-                margin-left: auto;
-                margin-right: auto;
-                padding: 10px;
-                left: 0;
-                right: 0;
-                bottom: 0px;
-                width: 150px;
-                background-color: $red;
-                border-top-left-radius: 15px;
-                border-top-right-radius: 15px;
-                transition: width 0.25s, padding-bottom 0.25s;
-                &:hover{
-                    padding-bottom: 20px;
-                    width: 170px;
-                }
-                &:hover + #caret-down{
-                    visibility: visible;
-                }
-                p{
-                    text-align: center;
-                }
-            }
-            i{
-                position: absolute;
-                margin: 0 auto;
-                text-align: center;
-                left: 0;
-                right: 0;
-                bottom: 0;
-                padding-bottom: 10px;
-                visibility: hidden;
+            .image{
+                max-width: 100vh!important;
+                max-height: 80vh;
+                align-self: center;
+                display: block;
+                margin: 0 auto 0 auto;
             }
         }
     }
 }
-.btn-informatie{
-    margin-bottom: 25px;
+.gallery-thumb{
+    max-height: 80vh;
+    overflow: auto;
+    margin: 50px 0;
+    padding: 50px;
+    &::-webkit-scrollbar{ 
+        width: 0 !important;//hide scrollbar 
+    }
+    .gallery-thumb-list{
+        list-style: none;
+        padding: 0;
+        li{
+            opacity: 0.4;
+            margin: 25px 0;
+            &:last-of-type{
+                margin-top:0;
+            }
+            &:first-of-type{
+                margin-bottom: 0;
+            }
+            &:hover{
+                opacity: 1;
+            }
+            transition: opacity 0.5s;
+        }
+        .image-thumb{
+            width: 100%;
+        } 
+        .mage-active{
+            opacity: 1;
+        }
+    }
 }
 //-----------------------------//
 
-//ons-product.html-------------------//
-.row{
-    margin: 25px 0;
-    &:first-of-type{
-        margin-top:0;
-    }
-    &:last-of-type{
-        margin-bottom: 0;
-    }
+
+//red-accent.html-------------------//
+.parallax-bg {
+    width: 100%;
+    z-index: -1;
+    position: absolute;
+    top: 20px;
+  }
+  
+  .jumbotron {
+    height: 35vh;
+    width: 100%;
+    background:transparent;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    border: solid red 2px;
 }
-.btn-bestel{
-    text-transform: uppercase;
-}
-.jumbotron-fluid{
-    background-color: $lightgrey;
-    padding: 2rem 2rem;
-    i{
-        margin-left: 25px;
-    }
-    ul{
-        list-style: none;
-        font-weight: bolder;
-        padding: 0;
-        li{
-            color: $white;
-            padding-left: 1.3em;
-            margin-bottom: 10px;
-            &:before {
-                content: "\f00c"; /* FontAwesome Unicode */
-                font-family: FontAwesome;
-                display: inline-block;
-                margin-left: -1.3em;
-                width: 1.3em; 
-                color: $red;
-            }
-            &:last-of-type{
-                margin-bottom: 0px;
-            }
-        }
-    }
-}
-table{
-    th, td{
-        border: none!important;
-    }
-    tr{
-        th{
-            padding-left: 25px!important;
-        }
-        &.row-head{
-            border-bottom: 1px solid $lightgrey;
-            text-transform: uppercase;
-            th{
-                padding: 25px 0 0 0!important;
-            }
-        }
-    }
-}
+
+
+  //original
+  /*.parallax-bg {
+    width: 100%;
+    height: 40vh;
+    z-index: -1;
+  }
+  
+  .jumbotron {
+    height: 35vh;
+    width: 100%;
+    background:transparent;
+    margin: 0;
+    padding: 0;
+  }*/
+  
+
 //-----------------------------//
 
 //contact.html-------------------//
 .fa{
     width: 25px;
+    text-align: center;
+}
+#facebook_contact,
+#instagram_contact,
+#youtube_contact{
+    color: $black;
+    &:hover{
+        color: $lightgrey;
+    }
 }
 form.contact{
-    .form-item{
-        margin-bottom: 10px;
-    }
-    textarea{
-        height: 200px;
-    }
-    a.btn{
-        margin-top: 15px;
-    }
-    .row, .col-12{
-        padding-left: 0!important;
-        padding-right: 0!important;
+    #gotcha{
+        visibility: hidden;
     }
 }
 //-----------------------------//
 
 
-//bestel.html-------------------//
-.breadcrumb{
-    background-color: transparent;
-    padding: 0;
-    li{
-        a{
-            color: $red;
-            transition: color 0.5s;
-        }
-        &.active{
-            color:$lightgrey;
-            font-weight: bolder;
-        }
-    }
-}
-form.bestel{
-    margin-bottom: 50px;
-    .form-control{
-        display: inline;
-        width: 50px;
-    }
-}
-.btn-gegevens-smartphone{
-    margin-top:25px;
-}
-.prijs-bestel{
-    font-size: 24px;
-}
-//-----------------------------//
-
-
-//gegevens.html-------------------//
-form.gegevens{
-    margin-top: 25px;
-    input{
-        margin-bottom: 10px;
-    }
-}
-.btn-goto{
-    margin-top: 15px;
-    margin-bottom: 10px;
-}
-.goto{
-    margin-top: 15px;
-    a{
-        color: black;
-        transition: color 0.5s;
-        &:hover{
-            color: $red;
-        }
-        &:active{
-            color: $darkred;
-        }
-    }
-}
-//-----------------------------//
-
-
-//betalen.html-------------------//
-.betaalkeuze{
-    margin-top: 25px;
-}
-.betaal-icon{
-    width: 30px;
-    margin-right: 10px;
-}
-input[type='radio']:checked:after {
-    width: 20px;
-    height: 20px;
-    border-radius: 15px;
-    top: -2px;
-    left: -2px;
-    position: relative;
-    background-color: $white;
-    content: '';
-    display: inline-block;
-    visibility: visible;
-    border: 6px solid $red;
-}
-//-----------------------------//
 
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) {
