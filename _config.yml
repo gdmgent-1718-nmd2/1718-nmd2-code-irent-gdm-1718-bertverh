@@ -4,14 +4,14 @@
 
 # Site settings
 # ─────────────
-baseurl: /photosbertje # the subpath of your site, e.g. /blog
+baseurl: /1718-nmd2-code-irent-gdm-1718-bertverh # the subpath of your site, e.g. /blog
 # host   : 127.0.0.1
 # port   : 4000
 
 # Custom Site variables
 # ─────────────────────
 show-style-guide: true # Show style guide in footer.
-title: Photos Bertje
+title: iRent
 
 # Build settings
 # ──────────────
